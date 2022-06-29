@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViberBotOblicSoft", "ViberBotOblicSoft\ViberBotOblicSoft.csproj", "{FE90DF04-24C5-4BA8-8296-99E9CBA15E64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViberBotOblicSoft.Domain", "ViberBotOblicSoft.Domain\ViberBotOblicSoft.Domain.csproj", "{14F2D4EC-3354-49B5-A70D-1A3936F9EABE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViberBotOblicSoft.Data", "ViberBotOblicSoft.Data\ViberBotOblicSoft.Data.csproj", "{22F39589-CA26-4D61-9F7E-52D7B56BF042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViberBotOblicSoft.Business", "ViberBotOblicSoft.Business\ViberBotOblicSoft.Business.csproj", "{94F84773-118B-46C6-B92F-DB7B3AFE0A21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE90DF04-24C5-4BA8-8296-99E9CBA15E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE90DF04-24C5-4BA8-8296-99E9CBA15E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE90DF04-24C5-4BA8-8296-99E9CBA15E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE90DF04-24C5-4BA8-8296-99E9CBA15E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F2D4EC-3354-49B5-A70D-1A3936F9EABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F2D4EC-3354-49B5-A70D-1A3936F9EABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F2D4EC-3354-49B5-A70D-1A3936F9EABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F2D4EC-3354-49B5-A70D-1A3936F9EABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22F39589-CA26-4D61-9F7E-52D7B56BF042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22F39589-CA26-4D61-9F7E-52D7B56BF042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22F39589-CA26-4D61-9F7E-52D7B56BF042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22F39589-CA26-4D61-9F7E-52D7B56BF042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F84773-118B-46C6-B92F-DB7B3AFE0A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F84773-118B-46C6-B92F-DB7B3AFE0A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F84773-118B-46C6-B92F-DB7B3AFE0A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F84773-118B-46C6-B92F-DB7B3AFE0A21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61D3485D-C784-4448-9584-21DFBF6FC815}
+	EndGlobalSection
+EndGlobal
