@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
+using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ViberBotOblicSoft.Business.BotService;
+using ViberBotOblicSoft.Configuration;
 using ViberBotOblicSoft.Domain.Models;
 
 namespace ViberBotOblicSoft.Controllers
@@ -14,12 +14,12 @@ namespace ViberBotOblicSoft.Controllers
     public class TestController : ControllerBase
     {
         private readonly IBotService _botService;
-        private readonly ILogger<IBotService> _logger;
+        private readonly BotServiceConfiguration _configuration;
 
-        public TestController(IBotService botService, ILogger<IBotService> logger)
+        public TestController(IBotService botService, IOptions<BotServiceConfiguration> configuration)
         {
             _botService = botService;
-            _logger = logger;
+            _configuration = configuration.Value;
         }
 
         [HttpGet("{IMEI}")]
@@ -30,15 +30,7 @@ namespace ViberBotOblicSoft.Controllers
             if (string.IsNullOrWhiteSpace(IMEI))
                 return BadRequest("Empty IMEI");
 
-            try
-            {
-                return Ok(await _botService.GetAggregateJorneyAsync(IMEI));
-            }
-            catch (Exception e)
-            {
-                _logger.LogError($"====>\nException: {e.Message}\n Inner: {e.InnerException?.Message}\n<====");
-                return StatusCode(500);
-            }          
+            return Ok(await _botService.GetAggregateJorneyAsync(IMEI));
         }
 
         [HttpGet("{IMEI}/Top")]
@@ -49,15 +41,7 @@ namespace ViberBotOblicSoft.Controllers
             if (string.IsNullOrWhiteSpace(IMEI))
                 return BadRequest("Empty IMEI");
 
-            try
-            {
-                return Ok(await _botService.GetListJorneyAsync(IMEI, 10)); // TODO: from configuration
-            }
-            catch (Exception e)
-            {
-                _logger.LogError($"====>\nException: {e.Message}\n Inner: {e.InnerException?.Message}\n<====");
-                return StatusCode(500);
-            }
+            return Ok(await _botService.GetListJorneyAsync(IMEI, _configuration.TopCount));
         }
     }
 }

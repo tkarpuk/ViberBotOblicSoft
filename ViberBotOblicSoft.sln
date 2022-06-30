@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViberBotOblicSoft", "ViberBotOblicSoft\ViberBotOblicSoft.csproj", "{FE90DF04-24C5-4BA8-8296-99E9CBA15E64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViberBotOblicSoft", "ViberBotOblicSoft\ViberBotOblicSoft.csproj", "{FE90DF04-24C5-4BA8-8296-99E9CBA15E64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViberBotOblicSoft.Domain", "ViberBotOblicSoft.Domain\ViberBotOblicSoft.Domain.csproj", "{14F2D4EC-3354-49B5-A70D-1A3936F9EABE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViberBotOblicSoft.Domain", "ViberBotOblicSoft.Domain\ViberBotOblicSoft.Domain.csproj", "{14F2D4EC-3354-49B5-A70D-1A3936F9EABE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViberBotOblicSoft.Data", "ViberBotOblicSoft.Data\ViberBotOblicSoft.Data.csproj", "{22F39589-CA26-4D61-9F7E-52D7B56BF042}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViberBotOblicSoft.Data", "ViberBotOblicSoft.Data\ViberBotOblicSoft.Data.csproj", "{22F39589-CA26-4D61-9F7E-52D7B56BF042}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViberBotOblicSoft.Business", "ViberBotOblicSoft.Business\ViberBotOblicSoft.Business.csproj", "{94F84773-118B-46C6-B92F-DB7B3AFE0A21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViberBotOblicSoft.Business", "ViberBotOblicSoft.Business\ViberBotOblicSoft.Business.csproj", "{94F84773-118B-46C6-B92F-DB7B3AFE0A21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViberBotOblicSoft.Viber", "ViberBotOblicSoft.Viber\ViberBotOblicSoft.Viber.csproj", "{71442BCD-1FED-4019-B31F-67FC1567CB77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{94F84773-118B-46C6-B92F-DB7B3AFE0A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94F84773-118B-46C6-B92F-DB7B3AFE0A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94F84773-118B-46C6-B92F-DB7B3AFE0A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71442BCD-1FED-4019-B31F-67FC1567CB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71442BCD-1FED-4019-B31F-67FC1567CB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71442BCD-1FED-4019-B31F-67FC1567CB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71442BCD-1FED-4019-B31F-67FC1567CB77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

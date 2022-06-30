@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ViberBotOblicSoft.Configuration;
 using ViberBotOblicSoft.Infrastructure;
 
 namespace ViberBotOblicSoft
@@ -19,17 +20,19 @@ namespace ViberBotOblicSoft
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<BotServiceConfiguration>(Configuration.GetSection("BotService"));
+            services.Configure<ViberConfiguration>(Configuration.GetSection("Viber"));
+
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
             });
-            //services.AddMvc();
+
             services.AddEFSqlServer(Configuration);
             services.AddViberBotServices();
             services.AddControllers();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -37,13 +40,13 @@ namespace ViberBotOblicSoft
                 app.UseDeveloperExceptionPage();
             }
 
+            app.ConfigureExceptionHandler();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseCors(options => options.AllowAnyOrigin());
-
-            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

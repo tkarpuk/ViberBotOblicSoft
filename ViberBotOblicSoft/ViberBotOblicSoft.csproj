@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ViberBotOblicSoft.Business\ViberBotOblicSoft.Business.csproj" />
     <ProjectReference Include="..\ViberBotOblicSoft.Data\ViberBotOblicSoft.Data.csproj" />
+    <ProjectReference Include="..\ViberBotOblicSoft.Viber\ViberBotOblicSoft.Viber.csproj" />
   </ItemGroup>
 
 </Project>
